@@ -50,7 +50,7 @@ public class Drawing extends Canvas {
                     case "Square":
                         s=new Square(settings.sizeValue.getValue(), p, col);
                         break;
-                    case "Rect":
+                    case "Rectangle":
                         s=new Rect(settings.sizeValue.getValue(), settings.sizeValue.getValue(), p, col);
                         break;
                 }
