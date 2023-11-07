@@ -12,7 +12,7 @@ public class LabelledSliderPanel extends JPanel {
     private SliderValue sliderValue;
     public LabelledSliderPanel(String labelText, int min, int max, SliderValue sliderValue) {
         label = new JLabel(labelText);
-        slider = new JSlider(JSlider.HORIZONTAL, min, max, sliderValue.value);
+        slider = new JSlider(JSlider.HORIZONTAL, min, max, sliderValue.getValue());
         // Initialize the sliderValue field
         this.sliderValue=sliderValue;
         // A nixe BorderLayout
@@ -22,7 +22,7 @@ public class LabelledSliderPanel extends JPanel {
         ChangeListener sliderListener=new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 // When the value of the slider is changed, it updates the mutable object passed in
-                sliderValue.value=slider.getValue();
+                sliderValue.setValue(slider.getValue());
             }
         };
         slider.addChangeListener(sliderListener);

@@ -40,18 +40,18 @@ public class Drawing extends Canvas {
                 // Get the mouse position
                 Point p=e.getPoint();
                 // Create a new shape based on the settings
-                Color col=new Color(settings.redValue.value, settings.greenValue.value, settings.blueValue.value);
-                int size= settings.sizeValue.value;
+                Color col=new Color(settings.redValue.getValue(), settings.greenValue.getValue(), settings.blueValue.getValue());
+                int size= settings.sizeValue.getValue();
                 Shape s=null;
                 switch(settings.shape){
                     case "Circle":
-                        s=new Circle(settings.sizeValue.value, p, col);
+                        s=new Circle(settings.sizeValue.getValue(), p, col);
                         break;
                     case "Square":
-                        s=new Square(settings.sizeValue.value, p, col);
+                        s=new Square(settings.sizeValue.getValue(), p, col);
                         break;
                     case "Rect":
-                        s=new Rect(settings.sizeValue.value, settings.sizeValue.value, p, col);
+                        s=new Rect(settings.sizeValue.getValue(), settings.sizeValue.getValue(), p, col);
                         break;
                 }
 
